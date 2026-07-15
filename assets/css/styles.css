@@ -194,8 +194,12 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
   border:1px solid var(--line);background:rgba(255,255,255,.03);padding:.4rem .8rem;border-radius:999px}
 .hero__badges svg{width:1em;height:1em;color:var(--gold)}
 
-.scroll-cue{position:absolute;left:50%;bottom:1.4rem;transform:translateX(-50%);z-index:1;color:var(--gold);
-  display:grid;place-items:center;opacity:.8;animation:bob 2.2s var(--ease) infinite}
+.scroll-cue{position:absolute;left:50%;bottom:1.7rem;transform:translateX(-50%);z-index:2;color:var(--gold);
+  display:grid;place-items:center;width:50px;height:50px;border-radius:50%;
+  border:1px solid var(--line);background:rgba(12,14,18,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  box-shadow:0 8px 24px -12px rgba(0,0,0,.6);animation:bob 2.2s var(--ease) infinite;
+  transition:background .25s,color .25s,border-color .25s}
+.scroll-cue:hover,.scroll-cue:focus-visible{background:var(--gold-grad);color:#12100a;border-color:transparent}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
 /* ---------- Highlights strip ---------- */
@@ -225,6 +229,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .service p{font-size:.94rem;line-height:1.55}
 .service--wide{grid-column:span 2}
 @media (max-width:560px){.service--wide{grid-column:span 1}}
+.services-more-wrap{display:none;margin-top:1.7rem;text-align:center}
 
 /* ---------- Feature (image + text) ---------- */
 .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
@@ -287,7 +292,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.4rem);align-items:start}
 .contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,3vw,2.2rem)}
 .contact-list{display:grid;gap:1.1rem;margin:1.5rem 0}
-.contact-list li{display:flex;gap:1rem;align-items:flex-start}
+.contact-list li{display:flex;gap:1rem;align-items:center}
 .contact-list .ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--gold-grad-soft);border:1px solid var(--line);color:var(--gold)}
 .contact-list .ic svg{width:22px;height:22px}
 .contact-list .lbl{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);font-family:var(--font-display)}
@@ -341,7 +346,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .legal-block p{font-size:.8rem;color:var(--muted-2);line-height:1.7;max-width:none}
 .legal-block .ph{color:var(--gold);font-style:normal;border-bottom:1px dotted var(--gold-deep)}
 
-.footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;padding-block:1.5rem}
+.footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;padding-block:1.5rem;margin-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--line-soft)}
 .footer__bottom small{color:var(--muted-2);font-size:.82rem}
 .footer__bottom nav{display:flex;flex-wrap:wrap;gap:1.2rem}
 .footer__bottom nav a,.footer__bottom nav button{color:var(--muted);font-size:.82rem;transition:color .2s}
@@ -429,6 +434,8 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 }
 @media (max-width:600px){
   .highlights .grid{grid-template-columns:1fr}
+  html.js .services-more-wrap{display:block}
+  html.js .services-grid:not(.is-open) .service:nth-child(n+7){display:none}
   .gallery{grid-template-columns:repeat(2,1fr);gap:.6rem}
   .gallery__item--tall{grid-row:span 1}
   .gallery__item--tall img{aspect-ratio:1}

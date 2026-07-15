@@ -165,6 +165,17 @@
     window.scrollTo({ top: 0, behavior: (matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth') });
   });
 
+  /* ---------- Services "ver mais" (mobile) ---------- */
+  var moreBtn = $('.services-more');
+  var servicesGrid = $('.services-grid');
+  if (moreBtn && servicesGrid) {
+    moreBtn.addEventListener('click', function () {
+      var open = servicesGrid.classList.toggle('is-open');
+      moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      moreBtn.textContent = open ? 'Ver menos serviços' : 'Ver mais serviços';
+    });
+  }
+
   /* ---------- Year ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
