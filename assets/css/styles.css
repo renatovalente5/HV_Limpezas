@@ -143,7 +143,7 @@ strong{color:var(--text);font-weight:600}
 .header.is-scrolled::before{opacity:0}
 .header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .brand{display:flex;align-items:center;gap:.7rem;z-index:2}
-.brand img{height:56px;width:auto;transition:height .3s var(--ease);filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
+.brand img{height:68px;width:auto;transition:height .3s var(--ease);filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
 .header.is-scrolled .brand img{height:44px}
 .brand__name{display:flex;flex-direction:column;line-height:1;gap:.18rem}
 .brand__name b{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.02em;color:#fff}
@@ -244,6 +244,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .stat b{font-family:var(--font-display);font-weight:800;font-size:1.9rem;display:block;line-height:1}
 .stat b .grad{display:inline}
 .stat span{font-size:.86rem;color:var(--muted)}
+@media (min-width:981px){#sobre .feature__media{margin-top:2.6rem}}
 
 /* ---------- Gallery ---------- */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:2.4rem}
