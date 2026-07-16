@@ -355,6 +355,9 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .footer__col a,.footer__col .val{color:var(--muted);font-size:.93rem;transition:color .2s}
 .footer__col a:hover{color:#fff}
 .footer__col .cost{color:var(--muted-2);font-size:.76rem}
+.footer__contacts li{display:flex;gap:.55rem;align-items:flex-start}
+.footer__contacts li svg{flex:none;width:17px;height:17px;color:var(--gold);margin-top:.2rem}
+.footer__contacts .cost{display:block;margin-top:.1rem}
 
 .legal-block{margin-top:clamp(2rem,4vw,3rem);padding:1.3rem 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
 .legal-block p{font-size:.8rem;color:var(--muted-2);line-height:1.7;max-width:none}
