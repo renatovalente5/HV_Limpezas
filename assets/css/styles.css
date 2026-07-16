@@ -40,7 +40,7 @@
   --radius-lg:24px;
 
   --container:1200px;
-  --header-h:84px;
+  --header-h:88px;
 
   --font-display:'Sora',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
@@ -142,7 +142,8 @@ strong{color:var(--text);font-weight:600}
 .header::before{content:"";position:absolute;inset:0 0 auto 0;height:160px;background:linear-gradient(180deg,rgba(6,8,12,.62),transparent);z-index:-1;pointer-events:none;transition:opacity .3s}
 .header.is-scrolled::before{opacity:0}
 .header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.brand{display:flex;align-items:center;gap:.7rem;z-index:2}
+.brand{display:flex;align-items:center;gap:.7rem;z-index:2;transition:transform .3s var(--ease)}
+.header:not(.is-scrolled) .brand{transform:translateY(7px)}
 .brand img{height:68px;width:auto;transition:height .3s var(--ease);filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
 .header.is-scrolled .brand img{height:44px}
 .brand__name{display:flex;flex-direction:column;line-height:1;gap:.18rem}
@@ -290,8 +291,8 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .review__by small{color:var(--muted-2);font-size:.78rem}
 
 /* ---------- Contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.4rem);align-items:start}
-.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,3vw,2.2rem)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.4rem);align-items:stretch}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,3vw,2.2rem);display:flex;flex-direction:column}
 .contact-list{display:grid;gap:1.1rem;margin:1.5rem 0}
 .contact-list li{display:flex;gap:1rem;align-items:center}
 .contact-list .ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--gold-grad-soft);border:1px solid var(--line);color:var(--gold)}
@@ -300,7 +301,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .contact-list a,.contact-list .val{color:#fff;font-size:1.06rem;font-weight:500;word-break:break-word}
 .contact-list a:hover{color:var(--gold)}
 .contact-list .cost{display:block;font-size:.76rem;color:var(--muted-2);margin-top:.1rem}
-.contact-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}
+.contact-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:auto;padding-top:1.4rem}
 
 /* Map + cookie gate */
 .map-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);min-height:420px;background:var(--surface-2)}
