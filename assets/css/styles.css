@@ -231,6 +231,18 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .service--wide{grid-column:span 2}
 @media (max-width:560px){.service--wide{grid-column:span 1}}
 .services-more-wrap{display:none;margin-top:1.7rem;text-align:center}
+/* Desktop: 4 colunas fixas → 2 linhas = 8 cartões, com "Ver mais" */
+@media (min-width:981px){
+  .services-grid{grid-template-columns:repeat(4,1fr)}
+  html.js .services-more-wrap{display:block}
+  html.js .services-grid:not(.is-open) .service:nth-child(n+9){display:none}
+}
+/* Tablet: 3 colunas → 2 linhas = 6 cartões */
+@media (min-width:601px) and (max-width:980px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  html.js .services-more-wrap{display:block}
+  html.js .services-grid:not(.is-open) .service:nth-child(n+7){display:none}
+}
 
 /* ---------- Feature (image + text) ---------- */
 .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
