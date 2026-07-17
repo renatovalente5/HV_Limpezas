@@ -202,6 +202,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
   transition:background .25s,color .25s,border-color .25s}
 .scroll-cue:hover,.scroll-cue:focus-visible{background:var(--gold-grad);color:#12100a;border-color:transparent}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+@media (max-width:760px){.scroll-cue{display:none}}
 
 /* ---------- Services ---------- */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.1rem;margin-top:2.6rem}
