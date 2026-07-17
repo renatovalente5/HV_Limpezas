@@ -203,16 +203,6 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .scroll-cue:hover,.scroll-cue:focus-visible{background:var(--gold-grad);color:#12100a;border-color:transparent}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
-/* ---------- Highlights strip ---------- */
-.highlights{background:var(--surface);border-block:1px solid var(--line)}
-.highlights .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
-.highlight{background:var(--surface);padding:1.5rem clamp(1rem,2vw,1.6rem);display:flex;gap:.95rem;align-items:flex-start}
-.highlight .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
-  background:var(--gold-grad-soft);border:1px solid var(--line);color:var(--gold)}
-.highlight .ic svg{width:22px;height:22px}
-.highlight b{display:block;font-family:var(--font-display);color:#fff;font-size:1rem;margin-bottom:.15rem}
-.highlight p{font-size:.9rem;line-height:1.5}
-
 /* ---------- Services ---------- */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.1rem;margin-top:2.6rem}
 .service{
@@ -420,7 +410,6 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   :root{--header-h:74px}
-  .highlights .grid{grid-template-columns:repeat(2,1fr)}
   .feature{grid-template-columns:1fr}
   .feature.reverse .feature__media{order:0}
   .feature__media img{aspect-ratio:16/10}
@@ -450,7 +439,6 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
   .footer__col a{display:inline-block;padding-block:.2rem}
 }
 @media (max-width:600px){
-  .highlights .grid{grid-template-columns:1fr}
   html.js .services-more-wrap{display:block}
   html.js .services-grid:not(.is-open) .service:nth-child(n+7){display:none}
   .gallery{grid-template-columns:repeat(2,1fr);gap:.6rem}
