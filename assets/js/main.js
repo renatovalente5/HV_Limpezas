@@ -49,7 +49,7 @@
       if (document.body.classList.contains('nav-open')) closeNav(true); else openNav();
     });
   }
-  $$('.nav__links a').forEach(function (a) { a.addEventListener('click', function () { closeNav(false); }); });
+  $$('.nav a[href]').forEach(function (a) { a.addEventListener('click', function () { closeNav(false); }); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.body.classList.contains('nav-open')) closeNav(true);
   });
