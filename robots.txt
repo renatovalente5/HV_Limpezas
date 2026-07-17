@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renatovalente5.github.io/HV_Limpezas/sitemap.xml
+Sitemap: https://hvlimpezas.pt/sitemap.xml

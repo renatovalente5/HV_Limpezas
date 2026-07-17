@@ -3,7 +3,7 @@
 Site institucional (brochura) da **HV Limpezas** — limpeza de vidros, fachadas, painéis solares, softwash, capoto, impermeabilização e higienização de estofos. Empresas e particulares. Mozelos, Santa Maria da Feira.
 
 Site estático (HTML/CSS/JS, sem build), alojado em **GitHub Pages**.
-Produção: https://renatovalente5.github.io/HV_Limpezas/
+Produção: https://hvlimpezas.pt/
 
 ## Estrutura
 ```
