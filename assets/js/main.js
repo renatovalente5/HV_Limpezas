@@ -176,6 +176,17 @@
     });
   }
 
+  /* ---------- Galeria "ver mais" ---------- */
+  var galBtn = $('.gallery-more');
+  var galGrid = $('.gallery');
+  if (galBtn && galGrid) {
+    galBtn.addEventListener('click', function () {
+      var open = galGrid.classList.toggle('is-open');
+      galBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      galBtn.textContent = open ? 'Ver menos trabalhos' : 'Ver mais trabalhos';
+    });
+  }
+
   /* ---------- Year ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
