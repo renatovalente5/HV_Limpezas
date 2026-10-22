@@ -144,8 +144,13 @@
     if (f) f.remove();
     mapWrap.classList.remove('is-active');
   };
-  var showBar = function () { if (bar) { bar.hidden = false; requestAnimationFrame(function () { bar.classList.add('is-visible'); }); } };
-  var hideBar = function () { if (bar) { bar.classList.remove('is-visible'); setTimeout(function () { bar.hidden = true; }, 460); } };
+  /* Enquanto o aviso está à vista, o fundo da página ganha a altura dele: sem isto, o aviso
+     tapava o rodapé (identificação da empresa e botão do Livro de Reclamações). */
+  var root = document.documentElement;
+  var medirBar = function () { if (bar && !bar.hidden) root.style.setProperty('--cookiebar-h', bar.offsetHeight + 'px'); };
+  var showBar = function () { if (bar) { bar.hidden = false; document.body.classList.add('tem-cookiebar'); medirBar(); requestAnimationFrame(function () { bar.classList.add('is-visible'); }); } };
+  var hideBar = function () { if (bar) { bar.classList.remove('is-visible'); document.body.classList.remove('tem-cookiebar'); root.style.removeProperty('--cookiebar-h'); setTimeout(function () { bar.hidden = true; }, 460); } };
+  window.addEventListener('resize', medirBar, { passive: true });
 
   var accept = function () { store.set('accepted'); loadMap(); hideBar(); };
   var reject = function () { store.set('rejected'); unloadMap(); hideBar(); };

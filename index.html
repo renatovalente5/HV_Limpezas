@@ -34,7 +34,22 @@
 <!-- Preload key assets -->
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/sora-700.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/hero-fachada-vidros.webp" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/styles.css?v=12">
+<link rel="stylesheet" href="assets/css/styles.css?v=14">
+<!-- legal-comum:livro-css v1.0.0 -->
+<style>
+.lr-botao{display:inline-flex;align-items:center;gap:.5em;min-height:44px;min-width:44px;padding:.5em 1em;border:1px solid transparent;border-radius:.5em;background:#af272f;color:#ffffff;font-family:inherit;font-size:max(14px,.95rem);font-weight:600;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer}
+.lr-botao:hover,.lr-botao:focus-visible{text-decoration:underline;text-underline-offset:.15em}
+.lr-botao:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.lr-botao svg{width:1.5em;height:1.5em;flex:none}
+.lr-botao--vermelho{background:#af272f;color:#ffffff;border-color:transparent}
+.lr-botao--azul{background:#005a9c;color:#ffffff;border-color:transparent}
+.lr-botao--preto{background:#111111;color:#ffffff;border-color:transparent}
+.lr-botao--branco{background:#ffffff;color:#111111;border-color:#111111}
+.lr-texto{font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:.15em}
+.lr-texto svg{width:1.2em;height:1.2em;vertical-align:-.2em;margin-right:.3em}
+.lr-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+</style>
+<!-- /legal-comum:livro-css -->
 
 <script type="application/ld+json">
 {
@@ -477,6 +492,12 @@
           <a class="btn btn--wa" href="https://wa.me/351913858132?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20de%20limpeza." target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn--gold" href="tel:+351913858132">Ligar agora</a>
         </div>
+        <small class="contact-cta__cost">«Ligar agora»: 913 858 132 (Chamada para a rede móvel nacional)</small>
+        <div class="contact-livro">
+          <!-- legal-comum:livro v1.0.0 -->
+          <a class="lr-botao lr-botao--vermelho" href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener" lang="pt"><svg class="lr-icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm1 0v20h1.2V2H7Zm3.8 5.2h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h3.4a.8.8 0 0 1 0 1.6h-3.4a.8.8 0 0 1 0-1.6Z"/></svg><span class="lr-botao__texto">Livro de Reclamações</span><span class="lr-sr"> (abre numa nova janela)</span></a>
+          <!-- /legal-comum:livro -->
+        </div>
       </div>
 
       <div class="map-wrap reveal d1" id="map" data-map-src="https://www.google.com/maps?q=Rua%20Carlos%20Martins%2C%204535-537%20Mozelos%2C%20Santa%20Maria%20da%20Feira&hl=pt&z=16&output=embed">
@@ -486,6 +507,8 @@
           <p>O mapa é fornecido pelo Google Maps e só é carregado com o seu consentimento, para respeitar a sua privacidade.</p>
           <button class="btn btn--gold btn--sm" data-cookie="accept">Ativar mapa</button>
         </div>
+        <!-- Retirar a autorização junto ao próprio mapa (RGPD, art. 7.º, n.º 3): só aparece com o mapa carregado -->
+        <button type="button" class="btn btn--ghost btn--sm map-retirar" data-cookie="reject">Deixar de carregar o mapa</button>
       </div>
     </div>
   </div>
@@ -541,10 +564,9 @@
     <div class="footer__bottom">
       <small>© <span data-year>2026</span> HV Limpezas. Todos os direitos reservados.</small>
       <nav aria-label="Ligações legais">
-        <a class="reclam" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H7l-3 3V4Z"/></svg>
-          Livro de Reclamações
-        </a>
+        <!-- legal-comum:livro v1.0.0 -->
+        <a class="lr-botao lr-botao--vermelho" href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener" lang="pt"><svg class="lr-icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm1 0v20h1.2V2H7Zm3.8 5.2h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h3.4a.8.8 0 0 1 0 1.6h-3.4a.8.8 0 0 1 0-1.6Z"/></svg><span class="lr-botao__texto">Livro de Reclamações</span><span class="lr-sr"> (abre numa nova janela)</span></a>
+        <!-- /legal-comum:livro -->
         <a href="privacidade.html">Privacidade</a>
         <a href="cookies.html">Cookies</a>
         <a href="termos.html">Termos e Dados da Empresa</a>
@@ -587,6 +609,6 @@
   <span class="lightbox__count" aria-live="polite"></span>
 </dialog>
 
-<script src="assets/js/main.js?v=12" defer></script>
+<script src="assets/js/main.js?v=13" defer></script>
 </body>
 </html>

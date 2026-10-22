@@ -20,7 +20,22 @@
 <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/styles.css?v=12">
+<link rel="stylesheet" href="assets/css/styles.css?v=14">
+<!-- legal-comum:livro-css v1.0.0 -->
+<style>
+.lr-botao{display:inline-flex;align-items:center;gap:.5em;min-height:44px;min-width:44px;padding:.5em 1em;border:1px solid transparent;border-radius:.5em;background:#af272f;color:#ffffff;font-family:inherit;font-size:max(14px,.95rem);font-weight:600;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer}
+.lr-botao:hover,.lr-botao:focus-visible{text-decoration:underline;text-underline-offset:.15em}
+.lr-botao:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.lr-botao svg{width:1.5em;height:1.5em;flex:none}
+.lr-botao--vermelho{background:#af272f;color:#ffffff;border-color:transparent}
+.lr-botao--azul{background:#005a9c;color:#ffffff;border-color:transparent}
+.lr-botao--preto{background:#111111;color:#ffffff;border-color:transparent}
+.lr-botao--branco{background:#ffffff;color:#111111;border-color:#111111}
+.lr-texto{font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:.15em}
+.lr-texto svg{width:1.2em;height:1.2em;vertical-align:-.2em;margin-right:.3em}
+.lr-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+</style>
+<!-- /legal-comum:livro-css -->
 </head>
 <body>
 <a class="skip" href="#main">Saltar para o conteúdo</a>
@@ -81,15 +96,19 @@
         <p>O logótipo, a marca «HV Limpezas», os textos e as fotografias apresentadas são propriedade da HV Limpezas ou são utilizados com autorização, estando protegidos por direitos de autor e de propriedade industrial. Não é permitida a sua reprodução sem autorização prévia.</p>
 
         <h2>4. Livro de Reclamações</h2>
-        <p>Nos termos do Decreto-Lei n.º 156/2005, a HV Limpezas disponibiliza o <strong>Livro de Reclamações eletrónico</strong>, acessível em <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. A entidade reguladora/de fiscalização competente do setor é a <strong>ASAE — Autoridade de Segurança Alimentar e Económica</strong>.</p>
+        <p>Nos termos do Decreto-Lei n.º 156/2005, a HV Limpezas disponibiliza o <strong>Livro de Reclamações eletrónico</strong>, acessível em <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. A entidade reguladora/de fiscalização competente do setor é a <strong>ASAE — Autoridade de Segurança Alimentar e Económica</strong>.</p>
 
         <h2>5. Resolução Alternativa de Litígios de Consumo (RAL)</h2>
-        <p>Em caso de litígio de consumo, o consumidor pode recorrer à entidade de resolução alternativa de litígios de consumo territorialmente competente:</p>
-        <ul>
-          <li><strong>CICAP — Centro de Informação de Consumo e Arbitragem do Porto</strong> (Tribunal Arbitral de Consumo) — <a href="https://www.cicap.pt" target="_blank" rel="noopener">www.cicap.pt</a>.</li>
-          <li>Pode ainda consultar o Portal do Consumidor em <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">www.consumidor.gov.pt</a>.</li>
+        <!-- legal-comum:ral v1.0.0 -->
+        <div class="ral" lang="pt">
+        <p>Em caso de litígio de consumo, o consumidor pode recorrer a uma entidade de resolução alternativa de litígios de consumo. O centro competente é o do domicílio do consumidor ou do local da contratação; nos litígios de valor até 5 000 €, a arbitragem ou a mediação é obrigatória para o fornecedor se o consumidor a escolher (Lei n.º 24/96, art. 14.º, n.º 2; Lei n.º 144/2015, art. 18.º).</p>
+        <ul class="ral__lista">
+        <li><strong>CICAP</strong> — Centro de Informação de Consumo e Arbitragem do Porto (Área Metropolitana do Porto): <a href="https://cicap.pt/" target="_blank" rel="noopener">cicap.pt</a></li>
+        <li><strong>CNIACC</strong> — Centro Nacional de Informação e Arbitragem de Conflitos de Consumo (para quem resida fora da área do centro acima): <a href="https://www.cniacc.pt/" target="_blank" rel="noopener">cniacc.pt</a></li>
         </ul>
-        <p>Mais informação na Lei n.º 144/2015, de 8 de setembro.</p>
+        <p>A lista actualizada das entidades está no <a href="https://www.consumidor.gov.pt/resolucaoalternativalitigiosdeconsumo/centros-de-arbitragem2/encontrar-a-entidade-competente/lista-de-contactos" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+        </div>
+        <!-- /legal-comum:ral -->
 
         <h2>6. Lei aplicável e foro</h2>
         <p>Os presentes termos regem-se pela lei portuguesa. Para a resolução de quaisquer litígios é competente o foro da comarca da sede da empresa, sem prejuízo das regras imperativas de proteção do consumidor.</p>
@@ -97,7 +116,7 @@
         <h2>7. Contactos</h2>
         <p>Telefone <strong>913 858 132</strong> (Chamada para a rede móvel nacional) · Email <a href="mailto:limpezas_h.v@hotmail.com">limpezas_h.v@hotmail.com</a> · Rua Carlos Martins, 4535-537 Mozelos, Santa Maria da Feira.</p>
 
-        <p class="updated">Última atualização: julho de 2026.</p>
+        <p class="updated">Última atualização: outubro de 2026.</p>
       </article>
     </div>
   </section>
@@ -146,7 +165,9 @@
     <div class="footer__bottom">
       <small>© <span data-year>2026</span> HV Limpezas. Todos os direitos reservados.</small>
       <nav aria-label="Ligações legais">
-        <a class="reclam" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H7l-3 3V4Z"/></svg> Livro de Reclamações</a>
+        <!-- legal-comum:livro v1.0.0 -->
+        <a class="lr-botao lr-botao--vermelho" href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener" lang="pt"><svg class="lr-icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm1 0v20h1.2V2H7Zm3.8 5.2h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h5.4a.8.8 0 0 1 0 1.6h-5.4a.8.8 0 0 1 0-1.6Zm0 4h3.4a.8.8 0 0 1 0 1.6h-3.4a.8.8 0 0 1 0-1.6Z"/></svg><span class="lr-botao__texto">Livro de Reclamações</span><span class="lr-sr"> (abre numa nova janela)</span></a>
+        <!-- /legal-comum:livro -->
         <a href="privacidade.html">Privacidade</a>
         <a href="cookies.html">Cookies</a>
         <a href="termos.html" aria-current="page">Termos e Dados da Empresa</a>
@@ -166,6 +187,6 @@
   </div>
 </div>
 
-<script src="assets/js/main.js?v=12" defer></script>
+<script src="assets/js/main.js?v=13" defer></script>
 </body>
 </html>

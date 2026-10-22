@@ -1,0 +1,3 @@
+# Só para o GitHub Pages (Jekyll): o README é documentação do repositório, não uma página do site.
+exclude:
+  - README.md
