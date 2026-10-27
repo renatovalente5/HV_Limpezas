@@ -465,7 +465,6 @@ html.js .gallery:not(.is-open) .gallery__item:nth-child(n+9){display:none}
 /* ---------- Grupo 1 da auditoria legal (out 2026) ---------- */
 /* Livro de Reclamações (legal-comum, discreto): com a letra e a cor das outras ligações legais */
 .footer__bottom nav{align-items:center}
-.contact-livro{margin-top:1.1rem}
 .contact-cta__cost{display:block;margin-top:.55rem;font-size:.76rem;color:var(--muted-2)}
 /* Aviso de cookies: «Rejeitar» e «Aceitar» com o mesmo tamanho */
 .cookiebar__btns .btn{min-width:7.5rem}
